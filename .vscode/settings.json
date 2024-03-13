@@ -3,5 +3,5 @@
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "vscode.html-language-features",
-	"editor.fontSize": 18
+	"editor.fontSize": 14
 }
