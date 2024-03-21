@@ -48,7 +48,7 @@ console.log(darthVader);
 
 // Manual Class
 
-class Player {
+/*class Player {
     age = 20;
     constructor(name, hp, mp, items) {
         this.name = name;
@@ -86,7 +86,98 @@ AnotherPlayer.prototype.speak = function(phrase) {
     console.log('${this.name} says: ${phrase}');
 };
 
-const darthVader = new AnotherPlayer("Darth Vader" 200, 50, ["Saber"]);
+const darthVader = new AnotherPlayer("Darth Vader", 200, 50, ["Saber"]);
 console.log(darthVader);
 console.log(Object.getOwnPropertyNames(darthVader));
-console.log(Object.getOwnPropertyNames(darthVader.__proto__));
+console.log(Object.getOwnPropertyNames(darthVader.__proto__));*/
+
+/*class Animal {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+}
+
+const Giraffe = new Animal("Geoffrey", "mammal");
+console.log(Giraffe);
+console.log(Object.getOwnPropertyNames(Giraffe));
+
+function AnotherAnimal(name, type) {
+    this.name = name;
+    this.type = type;
+}
+
+const Horse = new Animal("Horse", "mammal");
+console.log(Horse);
+console.log(Object.getOwnPropertyNames(Horse));
+
+Giraffe.name = "Grace";
+console.log(Giraffe);
+console.log(Object.getOwnPropertyNames(Giraffe));
+
+Horse.name = "Harry";
+console.log(Horse);
+console.log(Object.getOwnPropertyNames(Horse));*/
+
+/*class Students {
+    constructor(name, major, grade) {
+        this.name = name;
+        this.major = major;
+        this.grade = grade;
+    }
+    addGrade(result) {
+        this.grade.push(result)
+    }
+
+    calcGPA() {
+        let total = 0;
+        for (let i = 0; i<this.grade.length; i++) {
+            total += this.grade[i]
+        }
+        return(total / this.grade.length)
+    }
+}
+
+const Chris = new Students("Chris", "Software Engineering", [95, 75, 83]);
+console.log(Chris);
+console.log(Chris.calcGPA())*/
+
+/*class Bookstore {
+    constructor(books) {
+        this.books = books;
+    }
+    
+    listBooks() {
+        for (const book of this.books) {
+            //console.log(`${book.name} by ${book.author}`);
+            book.displayBook();
+        }
+    }
+}
+
+class Book {
+    constructor(name, author) {
+        this.name = name;
+        this.author = author;
+    }
+    
+    displayBook() {
+        console.log(`${this.name} by ${this.author}`);
+    }
+}
+
+const nineteen84 = new Book("1984", "George Orwell");
+const hp = new Book ("Harry Potter", "J.K Rowling");
+
+const bookstore = new Bookstore( [nineteen84, hp] )
+
+bookstore.listBooks();*/
+
+class Player {
+    constructor(spaceship, flyingAliens, playerLives, spaceshipAmmo) {
+        this.spaceship = spaceship;
+        this.flyingAliens = flyingAliens;
+        this.playerLives = playerLives;
+        this.spaceshipAmmo = spaceshipAmmo;
+    }
+}
