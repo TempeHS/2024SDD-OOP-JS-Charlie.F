@@ -1,5 +1,5 @@
 alert("hello alert"); //Output to windows alert box
-document.getElementById("ScriptThisDIV").innerHTML = "i am going to script this giv"; //Output to the DOM (Document Object Module) with the id="ScriptThisDIV"
+document.getElementById("ScriptThisDIV").innerHTML = "i am going to script this div"; //Output to the DOM (Document Object Module) with the id="ScriptThisDIV"
 console.log("Hello console"); //Output to the console (Open dev tools and look at the console)
 
 // comment
@@ -174,10 +174,43 @@ const bookstore = new Bookstore( [nineteen84, hp] )
 bookstore.listBooks();*/
 
 class Player {
-    constructor(spaceship, flyingAliens, playerLives, spaceshipAmmo) {
-        this.spaceship = spaceship;
-        this.flyingAliens = flyingAliens;
-        this.playerLives = playerLives;
-        this.spaceshipAmmo = spaceshipAmmo;
+    constructor(playerName, ammunition, hp, lives, playerDamage) {
+        this.playerName = playerName;
+        this.ammunition = ammunition;
+        this.hp = hp;
+        this.lives = lives;
+        this.playerDamage = playerDamage;
+    }
+    
+    updateAlienCount() {
+        for (const enemyAliens of this.alienCount) {
+            console.log(enemyAliens)
+            // update alien count when player kills an alien
+        }
     }
 }
+
+class obstacles {
+    constructor (obstacleHealth, obstacleCount) {
+        this.obstacleHealth = obstacleHealth;
+        this.obstacleCount = obstacleCount;
+    }
+}
+
+class enemyAliens {
+    constructor(alienCount) {
+        this.alienCount = alienCount;
+    }
+}
+
+const Player1 = new Player("Player 1", 250, 100, 3, 10);
+console.log(Player1);
+console.log(Object.getOwnPropertyNames(Player));
+
+const Aliens = new enemyAliens(44);
+console.log(Aliens);
+console.log(Object.getOwnPropertyNames(enemyAliens));
+
+const spaceObstacle = new obstacles(85, 4);
+console.log(spaceObstacle);
+console.log(Object.getOwnPropertyNames(spaceObstacle));
