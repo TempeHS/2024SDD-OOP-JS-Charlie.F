@@ -173,7 +173,9 @@ const bookstore = new Bookstore( [nineteen84, hp] )
 
 bookstore.listBooks();*/
 
-class Player {
+/*class Player {
+    xPos = 500;
+    yPos = 500;
     constructor(playerName, ammunition, hp, lives, playerDamage) {
         this.playerName = playerName;
         this.ammunition = ammunition;
@@ -182,11 +184,19 @@ class Player {
         this.playerDamage = playerDamage;
     }
     
+    shoot() {
+        //shooting method
+    }
+
     updateAlienCount() {
         for (const enemyAliens of this.alienCount) {
             console.log(enemyAliens)
             // update alien count when player kills an alien
         }
+    }
+
+    updateScore() {
+        //update player score
     }
 }
 
@@ -198,8 +208,13 @@ class obstacles {
 }
 
 class enemyAliens {
-    constructor(alienCount) {
+    hp = 1;
+    xPox;
+    yPox;
+    constructor(alienCount, yPos, xPos) {
         this.alienCount = alienCount;
+        this.yPos = yPos;
+        this.xPos = xPos;
     }
 }
 
@@ -213,4 +228,18 @@ console.log(Object.getOwnPropertyNames(enemyAliens));
 
 const spaceObstacle = new obstacles(85, 4);
 console.log(spaceObstacle);
-console.log(Object.getOwnPropertyNames(spaceObstacle));
+console.log(Object.getOwnPropertyNames(spaceObstacle));*/
+
+class EnemyFactory {
+    generateFlyingEnemy(name) {
+        const name = new class;
+    }
+
+}
+
+const factory = new EnemyFactory();
+const flying = factory.generateFlyingEnemy("batman");
+flying.fly(); //batman can fly
+
+const swimming = EnemyFactory.generateSwimmingEnemy("aquaman");
+swimming.swim(); //aquaman can swim
