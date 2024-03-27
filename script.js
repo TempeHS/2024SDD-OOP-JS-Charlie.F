@@ -230,12 +230,29 @@ const spaceObstacle = new obstacles(85, 4);
 console.log(spaceObstacle);
 console.log(Object.getOwnPropertyNames(spaceObstacle));*/
 
-class EnemyFactory {
+/*class EnemyFactory {
     generateFlyingEnemy(name) {
-        const name = new class;
-    }
+        return new (class FlyingEnemy {
+            constructor(flyingEnemyName) {
+                this.name = flyingEnemyName;
+            }
+            fly() {
+                console.log(this.name + " is flying");
+            }
+        }
+    })(name);
+}  
 
-}
+EnemyFactory.generateSwimmingEnemy = function(name) {
+    class SwimmingEnemy {
+        name = name;
+
+        swim() {
+            console.log(this.name + " is swimming");
+        }
+    }
+    return new SwimmingEnemy(name)
+};
 
 const factory = new EnemyFactory();
 const flying = factory.generateFlyingEnemy("batman");
@@ -243,3 +260,53 @@ flying.fly(); //batman can fly
 
 const swimming = EnemyFactory.generateSwimmingEnemy("aquaman");
 swimming.swim(); //aquaman can swim
+
+console.log(Object.getGetOwnPropertyNames(EnemyFactory));
+console.log(Object.getGetOwnPropertyNames(factory));
+console.log(Object.getGetOwnPropertyNames(factory.__proto__));
+console.log(Object.getGetOwnPropertyNames(flying.__proto__));
+console.log(Object.getGetOwnPropertyNames(swimming.__proto__));*/
+
+// inheritence and polymorphism
+
+class Warrior {
+    constructor(
+        name,
+        hp,
+        items,
+        shield) {
+            
+        this.name = name;
+        this.hp = hp;
+        this.items = items;
+        this.shield = shield;
+    }
+}
+
+class Wizard {
+    constructor(
+        name,
+        hp,
+        items,
+        wand) {
+            
+        this.name = name;
+        this.hp = hp;
+        this.items = items;
+        this.wand = wand;
+    }
+}
+
+class Bartender {
+    constructor(
+        name,
+        hp,
+        items,
+        mug) {
+            
+        this.name = name;
+        this.hp = hp;
+        this.items = items;
+        this.mug = mug;
+    }
+}
